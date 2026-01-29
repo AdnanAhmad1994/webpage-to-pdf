@@ -1,0 +1,48 @@
+🔍 DEBUGGING STEPS - "No active tab found" Error
+═══════════════════════════════════════════════════
+
+The error means chrome.tabs.query() is not finding the active tab.
+
+STEP 1: Check Extension Permissions
+───────────────────────────────────
+1. Go to chrome://extensions/
+2. Find "Webpage to PDF Pro"
+3. Check if it shows any permission errors
+4. Click "Details" → verify "Site access" shows "On all sites"
+
+STEP 2: Check Console Logs
+───────────────────────────────────
+1. Right-click the PDF Pro icon
+2. Select "Inspect popup"
+3. Go to Console tab
+4. Click "Convert to PDF" again
+5. Look for errors in red
+
+STEP 3: Check Background Worker
+───────────────────────────────────
+1. Go to chrome://extensions/
+2. Find "Webpage to PDF Pro"
+3. Click "service worker" link (it might say "inactive")
+4. Console will open - look for errors
+
+STEP 4: Test on Simple Page
+───────────────────────────────────
+A test page should have opened: debug-test.html
+Try the extension on that page.
+
+If still not working, the issue is likely:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Option A: Manifest permissions issue
+Option B: Tab query timing issue  
+Option C: Chrome extension needs reload
+
+QUICK FIX TO TRY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Go to chrome://extensions/
+2. Find PDF Pro
+3. Click "Remove" button
+4. Click "Load unpacked" again
+5. Select the folder again
+6. Try on debug-test.html page
+
+Let me know what you see in the Console!

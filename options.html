@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage to PDF Pro - Settings</title>
+  <link rel="stylesheet" href="styles/design-tokens.css">
+  <link rel="stylesheet" href="styles/options.css">
+</head>
+
+<body>
+  <div class="layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" role="navigation" aria-label="Settings navigation">
+      <div class="sidebar-header">
+        <div class="logo">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
+              fill="var(--md-primary)" fill-opacity="0.2" />
+            <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2Z"
+              stroke="var(--md-primary)" stroke-width="1.5" />
+            <polyline points="14,2 14,8 20,8" stroke="var(--md-primary)" stroke-width="1.5" />
+            <text x="8" y="17" font-size="6" font-weight="600" fill="var(--md-primary)">PDF</text>
+          </svg>
+          <div class="logo-text">
+            <h1>PDF Pro</h1>
+            <span class="version">v2.0.0</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="general" aria-selected="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+          </svg>
+          <span>General</span>
+        </button>
+        <button class="nav-item" data-tab="advanced" aria-selected="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+          <span>Advanced</span>
+        </button>
+        <button class="nav-item" data-tab="help" aria-selected="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          <span>Help</span>
+        </button>
+        <button class="nav-item" data-tab="about" aria-selected="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="16" x2="12" y2="12" />
+            <line x1="12" y1="8" x2="12.01" y2="8" />
+          </svg>
+          <span>About</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="resetBtn" class="reset-button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <polyline points="1 4 1 10 7 10" />
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+          </svg>
+          Reset to Defaults
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- General Settings Tab -->
+      <section class="tab-panel active" data-tab="general" role="tabpanel" aria-label="General settings">
+        <header class="page-header">
+          <h2>General Settings</h2>
+          <p class="subtitle">Configure default PDF generation options</p>
+        </header>
+
+        <div class="settings-card">
+          <h3>Quality</h3>
+          <div class="form-group">
+            <label for="qualitySelect">PDF Quality</label>
+            <select id="qualitySelect" class="form-select">
+              <option value="medium">Medium — Faster, smaller file</option>
+              <option value="high">High — Recommended balance</option>
+              <option value="ultra">Ultra — Best quality, slower</option>
+            </select>
+            <p class="form-hint">Higher quality = larger file size and longer processing time</p>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>Capture Options</h3>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="fullPageCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Capture Full Page</span>
+              <span class="checkbox-hint">Capture entire page including content below the fold</span>
+            </div>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="infiniteScrollCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Handle Infinite Scroll</span>
+              <span class="checkbox-hint">Automatically scroll to load all dynamic content</span>
+            </div>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="waitImagesCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Wait for Images</span>
+              <span class="checkbox-hint">Ensure all images are loaded before conversion</span>
+            </div>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="removeToolbarCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Hide Fixed Elements</span>
+              <span class="checkbox-hint">Remove sticky headers and toolbars from PDF</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="settings-card">
+          <h3>PDF Features</h3>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="preserveLinksCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Preserve Hyperlinks</span>
+              <span class="checkbox-hint">Make links clickable in the PDF (highly recommended)</span>
+            </div>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="darkModeCheck">
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Dark Mode PDF</span>
+              <span class="checkbox-hint">Convert page to dark theme before generating PDF</span>
+            </div>
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" id="compressionCheck" checked>
+            <span class="checkbox-box"></span>
+            <div class="checkbox-content">
+              <span class="checkbox-label">Enable Compression</span>
+              <span class="checkbox-hint">Reduce file size with smart compression</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="settings-card">
+          <h3>File Naming</h3>
+          <div class="form-group">
+            <label for="fileNamePattern">File Name Pattern</label>
+            <input type="text" id="fileNamePattern" class="form-input" value="{title}_{date}"
+              placeholder="{title}_{date}">
+            <p class="form-hint">
+              Available: <code>{title}</code>, <code>{date}</code>, <code>{time}</code>, <code>{timestamp}</code><br>
+              Example: {title}_{date} → "Google_2026-01-18.pdf"
+            </p>
+          </div>
+        </div>
+
+        <div id="saveIndicator" class="save-indicator hidden" role="status" aria-live="polite">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="var(--md-success)" />
+            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span id="saveStatus">Settings saved</span>
+        </div>
+      </section>
+
+      <!-- Advanced Settings Tab -->
+      <section class="tab-panel" data-tab="advanced" role="tabpanel" aria-label="Advanced settings">
+        <header class="page-header">
+          <h2>Advanced Settings</h2>
+          <p class="subtitle">Fine-tune PDF generation behavior</p>
+        </header>
+
+        <div class="settings-card">
+          <h3>Page Format</h3>
+
+          <div class="form-group">
+            <label for="formatSelect">Paper Size</label>
+            <select id="formatSelect" class="form-select">
+              <option value="a4">A4 (210 × 297 mm)</option>
+              <option value="letter">Letter (8.5 × 11 in)</option>
+              <option value="legal">Legal (8.5 × 14 in)</option>
+              <option value="a3">A3 (297 × 420 mm)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="orientationSelect">Orientation</label>
+            <select id="orientationSelect" class="form-select">
+              <option value="portrait">Portrait</option>
+              <option value="landscape">Landscape</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>Performance</h3>
+          <div class="form-group">
+            <label for="dpiSelect">DPI (Resolution)</label>
+            <select id="dpiSelect" class="form-select">
+              <option value="1">1x — Low (Fast)</option>
+              <option value="2">2x — Medium</option>
+              <option value="3">3x — High (Recommended)</option>
+              <option value="4">4x — Ultra (Slow)</option>
+            </select>
+            <p class="form-hint">Higher DPI = sharper text but larger files</p>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>Localhost Support</h3>
+          <div class="info-callout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--md-primary)" stroke-width="2"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="16" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+            <div>
+              <strong>To enable localhost conversion:</strong>
+              <ol>
+                <li>Open <code>chrome://extensions</code></li>
+                <li>Find "Webpage to PDF Pro"</li>
+                <li>Click "Details"</li>
+                <li>Enable "Allow access to file URLs"</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>Diagnostics</h3>
+          <button id="exportDiagnosticsBtn" class="action-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Export Diagnostic Report
+          </button>
+          <p class="form-hint">Generate a report for troubleshooting issues</p>
+        </div>
+      </section>
+
+      <!-- Help Tab -->
+      <section class="tab-panel" data-tab="help" role="tabpanel" aria-label="Help and documentation">
+        <header class="page-header">
+          <h2>Help & Documentation</h2>
+        </header>
+
+        <div class="settings-card">
+          <h3>Getting Started</h3>
+          <ol class="steps-list">
+            <li>Navigate to any webpage you want to convert</li>
+            <li>Click the PDF Pro extension icon</li>
+            <li>Adjust settings if needed</li>
+            <li>Click "Convert to PDF"</li>
+            <li>Your PDF will download automatically without page refresh!</li>
+          </ol>
+        </div>
+
+        <div class="settings-card">
+          <h3>Tips for Best Results</h3>
+          <ul class="tips-list">
+            <li><strong>Wait for full load:</strong> Let the page fully load before converting</li>
+            <li><strong>Enable "Wait for Images":</strong> Ensures all images appear in PDF</li>
+            <li><strong>Use "Preserve Hyperlinks":</strong> Keep links clickable</li>
+            <li><strong>Adjust quality:</strong> Try different settings for optimal balance</li>
+            <li><strong>Dark Mode:</strong> Great for reducing eye strain when reading</li>
+          </ul>
+        </div>
+
+        <div class="settings-card">
+          <h3>Troubleshooting</h3>
+
+          <details class="faq-item">
+            <summary>Extension doesn't work on certain pages</summary>
+            <p>Chrome extensions cannot run on system pages (chrome://, chrome-extension://). Also check if the page has
+              strict Content Security Policy.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Images are missing in PDF</summary>
+            <p>Enable "Wait for Images" in settings and ensure the page is fully loaded before converting. Some
+              lazy-loaded images may need scrolling first.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>PDF is too large</summary>
+            <p>Lower the quality setting or disable Ultra mode. Enable compression in settings.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Links not clickable in PDF</summary>
+            <p>Ensure "Preserve Hyperlinks" is enabled in settings.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Localhost pages don't work</summary>
+            <p>Go to chrome://extensions, find PDF Pro, click Details, and enable "Allow access to file URLs".</p>
+          </details>
+        </div>
+
+        <div class="settings-card">
+          <h3>Keyboard Shortcuts</h3>
+          <p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> (Mac: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>) —
+            Open PDF Pro</p>
+        </div>
+      </section>
+
+      <!-- About Tab -->
+      <section class="tab-panel" data-tab="about" role="tabpanel" aria-label="About">
+        <header class="page-header">
+          <h2>About Webpage to PDF Pro</h2>
+        </header>
+
+        <div class="settings-card">
+          <h3>Version 2.0.0</h3>
+          <p>Professional webpage to PDF converter with advanced features.</p>
+
+          <h4>Key Features</h4>
+          <ul class="feature-list">
+            <li>Full-page capture with infinite scroll support</li>
+            <li>Clickable hyperlink preservation</li>
+            <li>Dark mode PDF generation</li>
+            <li>No page refresh after download</li>
+            <li>High-quality output with compression</li>
+            <li>Smart file naming</li>
+            <li>Localhost support</li>
+            <li>Multiple quality presets</li>
+          </ul>
+
+          <h4>Technology Stack</h4>
+          <p>Built with Chrome Extension Manifest V3, html2canvas, jsPDF</p>
+        </div>
+
+        <div class="settings-card">
+          <h3>Privacy Policy</h3>
+          <div class="privacy-box">
+            <strong>We respect your privacy:</strong>
+            <ul>
+              <li>No data collection or tracking</li>
+              <li>No external servers — all processing happens locally</li>
+              <li>No analytics or telemetry</li>
+              <li>Open source and transparent</li>
+            </ul>
+            <p>Your PDFs are generated entirely in your browser and never leave your device.</p>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <h3>Support</h3>
+          <p>Need help? Found a bug? Have a feature request?</p>
+          <button id="supportBtn" class="action-button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Get Support
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>
